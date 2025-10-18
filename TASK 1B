@@ -1,0 +1,55 @@
+Algorithm
+
+DFS-
+
+Step 1: Declare a queue and insert the starting Vertex.
+
+Step 2: Initialize a visited array and mark the starting Vertex as visited.
+
+Step3: Remove the First vertex of queue.
+
+Step 4: Mark that vertex as visited
+
+Step 5: Insert all the unvisited neighbors of the vertex into queue.
+
+Step 6: stop.
+
+Program
+
+graph = {
+
+'3': ['2', '4'].
+
+'7': ['8'].
+
+'2': [].
+
+'5': ['3','7']. '8":[ }
+
+'4': ['8'].
+
+def dfs(graph, start):
+
+visited = set()
+
+stack = [start]
+
+while stack:
+
+node = stack.pop()
+
+if node not in visited:
+
+print(node)
+
+visited.add(node)
+
+for neighbor in graph[node]:
+
+if neighbor not in visited:
+
+stack.append(neighbor)
+
+print("Following is the Depth-First Search")
+
+dfs(graph, '5')
